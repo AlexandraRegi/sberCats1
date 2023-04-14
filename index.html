@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Милые котики</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+			integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<link rel="stylesheet" href="style.css" />
+		<script src="./components/cart.js" defer></script>
+		<script src="./components/catCardPopup.js" defer></script>
+        <script src="./components/updateCatCard.js" defer></script>
+		<script src="./api.js" defer></script>
+		<script src="./index.js" defer></script>
+	</head>
+	<body>
+		<header>
+			<a href="" class="logo"><i class="fa-solid fa-cat"></i> Милые котики</a>
+			<a class="btn" id="reload-page"> Обновить </a>
+			<a class="btn" href="" id="add"><i class="fa-regular fa-plus"></i></a>
+		</header>
+
+		<div class="content"></div>
+
+		<footer>
+			<nav>
+				<a href=""><i class="fa-brands fa-github"></i></a>
+				<a href=""><i class="fa-brands fa-vk"></i></a>
+				<a href=""><i class="fa-brands fa-telegram"></i></a>
+			</nav>
+		</footer>
+		<div class="popup-wrapper">
+			<div class="popup" id="popup-form">
+				<div class="popup-close btn"><i class="fa-solid fa-xmark"></i></div>
+				<h2>Добавить питомца</h2>
+				<form action="">
+					<div class="form-img"></div>
+					<input type="number" name="age" placeholder="Возраст" />
+					<input type="text" name="name" required placeholder="Имя" />
+					<input
+						type="number"
+						name="rate"
+						placeholder="Рейтинг (0-10)"
+						min="0"
+						max="10"
+					/>
+					<textarea name="description" placeholder="Описание"></textarea>
+					<label
+						>Любимчик <input type="checkbox" name="favourite" placeholder=""
+					/></label>
+					<input type="text" name="image" placeholder="Ссылка на фото" />
+					<button type="submit">Добавить котика</button>
+				</form>
+				
+			</div>
+		</div>
+
+	</body>
+</html>
